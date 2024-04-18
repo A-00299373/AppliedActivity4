@@ -7,6 +7,5 @@ The Snapchat website is the social media platform.
 Test Cases
 
 Id | Name | Student ID | Test Case | Expected Result | Rationale | Technique
---- | --- | --- | --- | --- | --- | ---
-				
-2|Sagar Shah|A00297514|Enter an Invalid Email address (example: "xyz@gmail") and other fields are filled with correct details, then click Sign Up & Accept.|The error message "Please enter a valid email address."|Verify that the error message should appear for specified field for entering incorrect info.|Error Guessing
+--- | --- | --- | --- | --- | --- | ---				
+2 | Sagar Shah|A00297514 | Enter an Invalid Email address (example: "xyz@gmail") and other fields are filled with correct details, then click Sign Up & Accept. | The error message "Please enter a valid email address." | Verify that the error message should appear for specified field for entering incorrect info. | Error Guessing
