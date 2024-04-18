@@ -14,6 +14,7 @@ namespace AppliedActivity_4
         {
             SubmitForm();
             EnterInvalidEmailAddress();
+            EnterInvalidPassword();
         }
 
         //Test case-1 Sumbitting the form without filling the data(Created by-Meet Lathiya - A00299373)
@@ -101,6 +102,61 @@ namespace AppliedActivity_4
             finally
             {
                 driver1.Quit();
+            }
+        }
+
+        //Test-3 Entering invalid password edited by Pratham Shah: A00303235
+        static void EnterInvalidPassword()
+        {
+            var driver2 = new EdgeDriver();
+            try
+            {
+                driver2.Url = "https://accounts.snapchat.com/accounts/v2/signup";
+
+                var firstname = driver2.FindElement(By.Name("first_name"));
+                firstname.SendKeys("XYZ");
+
+                var username = driver2.FindElement(By.Name("username"));
+                username.SendKeys("XYZ123");
+
+                var email = driver2.FindElement(By.Name("email"));
+                email.SendKeys("xyz@gmail.com");
+
+                var password = driver2.FindElement(By.Name("password"));
+                password.SendKeys("mmmmmmmm");
+
+                var birthmonth = driver2.FindElement(By.Name("birth_month"));
+                birthmonth.SendKeys("January");
+
+                var birthday = driver2.FindElement(By.Name("birth_day"));
+                birthday.SendKeys("1");
+
+                var birthyear = driver2.FindElement(By.Name("birth_year"));
+                birthyear.SendKeys("2001");
+
+                var signupbuttonclass = driver2.FindElement(By.ClassName("signup-button"));
+                var signupbutton = signupbuttonclass.FindElement(By.TagName("button"));
+                signupbutton.Submit();
+
+                var emailerrormessage = driver2.FindElements(By.CssSelector(".sds-control-status.error")).Select((x) => x.Text);
+
+                if (emailerrormessage.Any())
+                {
+                    foreach (var errorMessage in emailerrormessage)
+                    {
+                        Console.WriteLine(errorMessage);
+                    }
+                    Console.WriteLine("Test-3 is Passed.");
+                }
+                else
+                {
+                    Console.WriteLine("Test is failed.");
+                }
+                Console.ReadLine();
+            }
+            finally
+            {
+                driver2.Quit();
             }
         }
 
