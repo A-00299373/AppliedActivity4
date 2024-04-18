@@ -9,3 +9,4 @@ Test Cases
 Id | Name | Student ID | Test Case | Expected Result | Rationale | Technique
 --- | --- | --- | --- | --- | --- | ---				
 2 | Sagar Shah|A00297514 | Enter an Invalid Email address (example: "xyz@gmail") and other fields are filled with correct details, then click Sign Up & Accept. | The error message "Please enter a valid email address." | Verify that the error message should appear for specified field for entering incorrect info. | Error Guessing
+3 | Pratham Shah | A00303235 | Enter an Invalid Password (example: "mmmmmmmm") | The error message "Your password is too simple. You may use uppercase, lowercase, numbers, or symbols in your passwords to make them more secure." should appear. | Verify that the error message should appear for enhancing the password security. | Error Guessing
