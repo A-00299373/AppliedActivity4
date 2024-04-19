@@ -8,6 +8,7 @@ Test Cases
 
 Id | Name | Student ID | Test Case | Expected Result | Rationale | Technique
 --- | --- | --- | --- | --- | --- | ---				
+1 | Meet Lathiya | A00299373 | Leave all fields of the Sign Up page empty and then click the Sign Up & Accept. | The error message starting with "Please enter/provide a/an/your [field name]." should appear for all required fields. | Verify that the all required fields have been filled with some details. | Error Guessing
 2 | Sagar Shah|A00297514 | Enter an Invalid Email address (example: "xyz@gmail") and other fields are filled with correct details, then click Sign Up & Accept. | The error message "Please enter a valid email address." | Verify that the error message should appear for specified field for entering incorrect info. | Error Guessing
 3 | Pratham Shah | A00303235 | Enter an Invalid Password (example: "mmmmmmmm") | The error message "Your password is too simple. You may use uppercase, lowercase, numbers, or symbols in your passwords to make them more secure." should appear. | Verify that the error message should appear for enhancing the password security. | Error Guessing
 4 | Obed Sampong | A00280655 | Enter a User Name that has more than 15 characters (example: "NewwwSnapchatUser") along with other fields entered with correct details, then click Sign Up & Accept. | The error message  that pops up is "Oops! Usernames cannot be longer than 15 characters." | Ensuring the maximum number of characters allowed for the "User Name" field. | Boundary Value
